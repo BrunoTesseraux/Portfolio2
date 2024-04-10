@@ -1,0 +1,9 @@
+.code-klammern{
+    width: 100%;
+    .html-style-tags{
+        color: orange;
+        &.closed {
+            text-align: right;
+        }
+    }
+}
