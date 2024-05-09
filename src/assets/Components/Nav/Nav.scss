@@ -1,11 +1,17 @@
 .nav{
+    width: 75%;
+    margin: 20px auto 0;
     display: flex;
     justify-content: space-between;
     position: sticky;
-    top: 0;
+    top: 20px;
+    z-index: 99;
     ul{
         display: flex;
-        gap: 10px;
+        flex-shrink: 0;
+        &.navigation{
+            gap: 30px;
+        }
         button{
             background: none;
             border-radius: 50px;

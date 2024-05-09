@@ -1,3 +1,9 @@
+//Gedanken während der Erstellung
+//holy shit wird das ein chaos 
+//Ich will den code später mal nicht aufräumen 
+
+
+
 import './App.scss'
 import Header from './assets/Components/Header/Header'
 import Nav from './assets/Components/Nav/Nav'
@@ -15,9 +21,7 @@ function App() {
     <Header/>
     <CV/>
     <Projects/>
-    <Technologies/>
     <Contact/>
-    <Footer/>
     </>
   )
 }

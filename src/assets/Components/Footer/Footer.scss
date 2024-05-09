@@ -1,0 +1,12 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    a{
+        color: orange;
+        text-decoration: none;
+    }
+}

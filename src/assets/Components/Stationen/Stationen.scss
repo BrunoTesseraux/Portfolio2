@@ -1,0 +1,41 @@
+.station{
+    width: 48.5%;
+    position: relative;
+    h2{
+        color: orange;
+    }
+    &.active{
+        text-decoration: underline;        
+        &.left{
+            h2::before{
+                content: "*";
+            }
+        }
+        &.right{
+            h2::after{
+                content: "*";
+            }
+        }
+        h2{
+            font-weight: 500;
+        }
+    }
+    ul{
+        list-style: none;
+    }
+    &.left{
+        text-align: end;
+        h2::after{
+            content: '🔶'; /* Inhalt des After-Elements */
+            position: absolute;
+        }
+    }
+    &.right{
+        margin-left: 52%;
+        h2::before{
+            content: '🔶'; /* Inhalt des After-Elements */
+            position: absolute;
+            transform: translateX(-100%);
+        }
+    }
+}

@@ -2,12 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "code";
+  font-weight: 300;
 }
 img{
   max-width: 100%;
   display: block;
 }
 html{
-  background-color: black;
+  background-color: rgb(59, 59, 59);
   color: white;
+  scroll-snap-type: y mandatory;
 }
+@font-face {
+  font-family: "code";
+  src: url(./assets/Fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
+}
+// #root{
+//   overflow-y: scroll;
+//   scroll-snap-type: y mandatory;
+//   section, header, footer {
+//     scroll-snap-align: start;
+//   }
+// }

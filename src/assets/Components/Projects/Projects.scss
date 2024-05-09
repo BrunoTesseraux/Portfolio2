@@ -1,0 +1,12 @@
+.projects{
+    width: 75%;
+    scroll-snap-align: start;
+    height: 100vh;
+    margin: auto;
+    padding-top: 10%;
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+        gap: 25px;
+    }
+}

@@ -1,0 +1,45 @@
+.cv{
+    scroll-snap-align: start;
+    display: flex;
+    width: 75%;
+    height: 100vh;
+    margin: auto;
+    padding-top: 10%;
+    .stationen{
+        width: 50%;
+        position: relative;
+        .code-klammern{
+            height: 80%;
+        }
+        .content{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .trenner{
+            width: 3px;
+            height: 100%;
+            background-color: orange;
+            position: absolute;
+            left: 50%;
+        }
+    }
+    .infos{
+        width: 50%;
+        z-index: 5;
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: 0.5s;
+            border: 1px solid rgba(128, 128, 128, 0.265);
+        }
+        img:hover{
+            height: 300px;
+            scale: 3;
+            border-radius: 0;
+        }
+    }
+}

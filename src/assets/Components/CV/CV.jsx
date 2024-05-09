@@ -6,7 +6,7 @@ import "./CV.scss";
 const CV = () => {
     const testData = [
         {
-            title: "Abschnitt 1993-2014",
+            title: "1993-2014",
             items: ["Kindheit", "Schule"],
             additionalData: { // Zusätzliche Daten für Abschnitt 1
                 image: "schule.jpg",
@@ -17,13 +17,13 @@ const CV = () => {
             title: "2014-2016",
             items: ["Ausbildung zum Bankkaufmann", "entdecken anderer Möglichkeiten"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "Portrait.jpg",
+                image: "sparkasse2.jpg",
                 text: "In meiner Zeit in der Sparkasse habe ich schnell festgestellt, dass mir der Verkauf von Finanzprodukten nicht liegt. Schnell habe ich angefangen, andere Möglichkeiten zu suchen, wie ich meine Arbeitszeit dort produktiv verbringen kann. Aus dieser Motivation heraus ist ein Werbevideo für die Sparkasse entstanden und ich hatte die Möglichkeit ein Eigenes Snowboard zu bauen !!!HIER MUSS NOCH DER LINK REIN!!!"
             }
         },
         {
             title: "2017-2019",
-            items: ["Barkeeper", "London", "Teamwork"],
+            items: ["Barkeeper","Innsbruck", "London", "Teamwork"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
                 image: "./barLondon.jpg",
                 text: "Durch die Arbeit bei BE AT ONE habe ich gelernt wie wichtig eine gleiche vorgehensweise beim arbeiten ist. Man kann nicht immer alles so machen, wie man es im Kopf hat, weil jeh mehr Leute zusammenarbeiten, desto chaotischer und unübersichtlicher wird es."
@@ -39,9 +39,9 @@ const CV = () => {
         },
         {
             title: "2023-2024",
-            items: ["Suoercode", "HTML", "SCSS", "JavaScript", "Recat", "Tailwind"],
+            items: ["Supercode", "HTML", "SCSS", "JavaScript", "Recat", "Tailwind"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "./supercodePräsentation.jpg",
+                image: "./supercodePräsentation2.jpg",
                 text: "Bei Supercode hatte ich enlich Zeit, mich in diese neue Leidenschaft einzufinden. Jeder Tag war eine neue Herausforderung und das Lerntempo straff. Hier habe ich viele gute Freunde kennengelernt und ein weiteres mal erfahren, wie stark man sich in der richtigen Gruppe geganseitig anspornen kann."
             }
         },
@@ -49,20 +49,21 @@ const CV = () => {
             title: "Now",
             items: ["Looking for work", "Looking for collaborations"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "./supercodePräsentation.jpg",
+                image: "./supercodePräsentation2.jpg",
                 text: "Ich freue mich darauf, ein Teil eures Teams zu werden. Außerdem freue ich mich auch über einzelne kleine Projekte. Bitte schreibt mich hierfür einfach an: bruno.tesseruax@gmx.de. gerne auch zwischen 09:00 und 17:00 einfach anrufen. So kommen die Leute zam. (Falls dein projekt ehrenamtlich ist, bitte gleich erwähnen, vllt hab ich ja auch bock drauf und die Seite wird 50-100% billiger!!)"
             }
         },
     ];
+    const [selectedStationData, setSelectedStationData] = useState(testData[0].additionalData); // Standardmäßig "1993-2014"
+    const [activeStationIndex, setActiveStationIndex] = useState(0); // Index des aktiven Abschnitts
 
-    const [selectedStationData, setSelectedStationData] = useState(null);
-
-    const handleStationClick = (data) => {
-        setSelectedStationData(data.additionalData);
+    const handleStationClick = (data, index) => {
+        setSelectedStationData(data.additionalData); // Ausgewählte Daten setzen
+        setActiveStationIndex(index); // Index des aktiven Abschnitts aktualisieren
     };
 
     return ( 
-        <section className="cv">
+        <section className="cv" id='cv'>
             <div className="stationen">
                 <CodeKlammern content="Lebenslauf">
                     <div className="trenner"></div>
@@ -70,20 +71,26 @@ const CV = () => {
                         <Stationen 
                             key={index} 
                             station={section} 
-                            onClick={() => handleStationClick(section)} // Handle Click
+                            index={index} // Index als Prop übergeben
+                            onClick={() => handleStationClick(section, index)} // Handle Click
+                            isActive={index === activeStationIndex} // Aktive Klasse übergeben
                         />
                     ))}
                 </CodeKlammern>
             </div>
             <div className="infos">
+                        {selectedStationData && ( // Rendern nur wenn ausgewählte Daten vorhanden sind
+                    <>
                 <CodeKlammern content="mehr details">
-                    {selectedStationData && ( // Rendern nur wenn ausgewählte Daten vorhanden sind
-                        <div>
-                            <img src={selectedStationData.image} alt="Bild" />
-                            <p>{selectedStationData.text}</p>
-                        </div>
-                    )}
+                    <div className={selectedStationData ? "active" : ""}> {/* Klasse "active" hinzufügen */}
+                            <div>
+                                <p>{selectedStationData.text}</p>
+                            </div>
+                    </div>
                 </CodeKlammern>
+                    <img src={selectedStationData.image} alt="Bild" />
+                </>
+                        )}
             </div>
         </section>
     );
