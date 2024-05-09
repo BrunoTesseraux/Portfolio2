@@ -1,8 +1,25 @@
+import { useEffect } from "react";
 import CodeKlammern from "../CodeKlammern/CodeKlammern";
 import Nav from "../Nav/Nav";
 import "./Header.scss"
 
 const Header = () => {
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollValue = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+            document.body.style.setProperty('--scroll', scrollValue - 0.0073231109705976);
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+    
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    
+
+
     return ( 
     <header>
         <div className="profile">

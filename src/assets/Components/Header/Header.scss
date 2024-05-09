@@ -1,39 +1,77 @@
-header{
+header {
     height: 100vh;
-    overflow: hidden;
     scroll-snap-align: start;
-    // position: relative;
-    .profile{
+    position: relative; /* Make header a positioning context for absolute positioning */
+    
+    .profile {
         display: flex;
+        position: relative;
         width: 75%;
+        overflow: hidden;
+        height: 100%;
         padding-top: 200px;
         margin: auto;
-        .name{
+
+        .name {
             width: 200px;
-            // margin-left: 20%;
-            h1{
+            animation: parralaxx 0.5s linear infinite;
+            animation-play-state: paused;
+            animation-delay: calc(var(--scroll) * -1s);
+
+            h1 {
                 font-size: 3rem;
                 font-weight: 200;
             }
         }
-        .short-description{
+
+        .short-description {
             width: 400px;
             margin-left: auto;
-            .about-me{
+            animation: parralaxx 0.5s linear infinite;
+            animation-play-state: paused;
+            animation-delay: calc(var(--scroll) * -1s);
+
+            .about-me {
                 font-size: 1.4rem;
             }
         }
-        img{
+
+        img {
             position: absolute;
-            width: 75%;
-            bottom: -80px;
+            width: 100%;
+            bottom: 50px;
             margin-left: 5%;
+            animation: parralax 0.5s linear infinite;
+            animation-play-state: paused;
+            animation-delay: calc(var(--scroll) * -1s);
         }
     }
-    .verlauf{
+
+    .verlauf {
         position: absolute;
-        bottom: -450px;
+        top: 350px;
         width: 100%;
         height: 110%;
+        animation: parralaxverlauf 0.5s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+    }
+}
+
+@keyframes parralax {
+    to {
+        transform: translateY(1000px);
+    }
+}
+
+@keyframes parralaxx {
+    to {
+        transform: translateY(750px);
+    }
+}
+
+@keyframes parralaxverlauf {
+    to {
+        transform: translateY(-100px);
     }
 }

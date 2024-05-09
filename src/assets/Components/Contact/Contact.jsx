@@ -2,8 +2,10 @@ import Footer from "../Footer/Footer";
 import "./Contact.scss"
 
 const Contact = () => {
+
     return ( 
         <section className="contact">
+            <div className="card-wrapper">
             <div className="card">
                 <div className="text">
                     <div className="blur">
@@ -15,6 +17,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <img src="./Portrait.jpg" alt="bruno" />
+            </div>
             </div>
             <img className="verlauf" src="./verlauf2.png" alt="" />
             <Footer/>
