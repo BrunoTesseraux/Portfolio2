@@ -43,3 +43,17 @@
         }
     }
 }
+
+@media screen and (max-width: 770px) { 
+    .cv{
+        padding-top: 100px;
+        width: 90%;
+        .stationen{
+            width: 100%;
+            font-size: 0.8rem;
+        }
+        .infos{
+            display: none;
+        }
+    }
+}

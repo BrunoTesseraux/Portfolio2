@@ -55,7 +55,7 @@ const CV = () => {
         },
     ];
     const [selectedStationData, setSelectedStationData] = useState(testData[0].additionalData); // Standardmäßig "1993-2014"
-    const [activeStationIndex, setActiveStationIndex] = useState(0); // Index des aktiven Abschnitts
+    const [activeStationIndex, setActiveStationIndex] = useState(5); // Index des aktiven Abschnitts
 
     const handleStationClick = (data, index) => {
         setSelectedStationData(data.additionalData); // Ausgewählte Daten setzen

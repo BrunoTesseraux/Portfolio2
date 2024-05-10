@@ -8,15 +8,23 @@
     z-index: 99;
     ul{
         display: flex;
-
         &.navigation{
             gap: 30px;
         }
-        button{
-            background: none;
-            border-radius: 50px;
-            color: white;
-            padding: 5px 20px;
+        p{
+            transition: 0.5s;
+            transform: 0.5s;
         }
+        .active{
+            color: orange;
+            text-decoration: underline;
+            scale: 1.1;
+        }
+    }
+    @media screen and (max-width: 770px) { 
+        width: 100%; 
+        font-size: 0.7rem;
+        position: sticky;
+        bottom: 20px;
     }
 }

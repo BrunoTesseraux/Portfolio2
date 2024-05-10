@@ -8,7 +8,7 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollValue = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-            document.body.style.setProperty('--scroll', scrollValue - 0.0073231109705976);
+            document.body.style.setProperty('--scroll', scrollValue - 0.0083231109705976);
         };
     
         window.addEventListener("scroll", handleScroll);
@@ -21,7 +21,7 @@ const Header = () => {
 
 
     return ( 
-    <header>
+    <header id="about">
         <div className="profile">
             <div className="name">
                 <CodeKlammern content="developer">

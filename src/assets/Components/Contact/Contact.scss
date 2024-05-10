@@ -2,14 +2,14 @@
     height: 100vh;
     position: relative;
     scroll-snap-align: start;
-    .card-wrapper{
+        .card-wrapper{
         position: relative;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
         .card{
             z-index: 2;
-            width: 1300px;
+            max-width: 1300px;
             margin: auto;
             display: flex;
             text-align: center;
@@ -39,7 +39,7 @@
                         margin-bottom: 40px;
                     }
                     p{
-                        width: 600px;
+                        max-width: 600px;
                         margin-top: 20px;
                         margin-bottom: 20px;
                     }
@@ -68,11 +68,55 @@
     .verlauf{
         position: absolute;
         top: -300px;
-        z-index: 1;
+        z-index: 3;
         height: 80%;
         width: 100%;
     }
 }
+
+@media screen and (max-width: 770px) {
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            flex-direction: column-reverse;
+            width: 90%;
+            position: relative;
+            top: -150px;
+
+            .text {
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 0px !important;
+
+                h3{
+                    margin-bottom: 10px !important;
+                }
+
+                p{
+                    margin-top: 10px !important;
+                    margin-bottom: 10px !important;
+                }
+
+                .blur {
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    border-top-left-radius: 0px !important;
+                    padding: 20px !important;
+                }
+            }
+            img {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 0 !important; 
+
+            }
+        }
+    }
+}
+
 @keyframes parralaxcontact {
     to {
         transform: translateY(350px);

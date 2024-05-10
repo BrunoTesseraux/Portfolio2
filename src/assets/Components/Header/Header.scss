@@ -25,7 +25,7 @@ header {
         }
 
         .short-description {
-            width: 400px;
+            max-width: 400px;
             margin-left: auto;
             animation: parralaxx 0.5s linear infinite;
             animation-play-state: paused;
@@ -38,8 +38,8 @@ header {
 
         img {
             position: absolute;
-            width: 100%;
-            bottom: 50px;
+            min-width: 100%;
+            bottom: 10px;
             margin-left: 5%;
             animation: parralax 0.5s linear infinite;
             animation-play-state: paused;
@@ -57,6 +57,28 @@ header {
         animation-delay: calc(var(--scroll) * -1s);
     }
 }
+
+@media screen and (max-width: 770px) { 
+    header{
+        .profile{
+            flex-direction: column;
+            width: 100%;
+            padding-top: 30px;
+            .name, .short-description{
+                margin-inline: 10%;
+            }
+            img{
+                scale: 2;
+                bottom: 100px;
+                right: -90px;
+                animation: parralax 2s linear infinite;
+                animation-play-state: paused;
+                animation-delay: calc(var(--scroll) * -1s);
+            }
+        }
+    }
+}
+
 
 @keyframes parralax {
     to {
