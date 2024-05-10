@@ -9,7 +9,7 @@ const CV = () => {
             title: "1993-2014",
             items: ["Kindheit", "Schule"],
             additionalData: { // Zusätzliche Daten für Abschnitt 1
-                image: "schule.jpg",
+                image: "schule.JPG",
                 text: "Ich habe schon von klein auf immer Herausforderungen gesucht. Dabei habe ich mich aber noch nie voll und ganz auf die Efahrungen anderer verlassen können. Was wenn es einen besseren Weg gibt? Außerdem in der 9ten Klasse erste berührungspunkte zur Website erstellung."
             }
         },
