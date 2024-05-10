@@ -61,10 +61,10 @@ const Nav = () => {
     return (
         <div className="nav">
             <ul className="navigation">
-                <p className={activeTab === 'about' ? 'active' : ''} onClick={() => handleTabClick('about')}>&lt; About &gt;</p>
-                <p className={activeTab === 'cv' ? 'active' : ''} onClick={() => handleTabClick('cv')}>&lt; CV &gt;</p>
-                <p className={activeTab === 'projects' ? 'active' : ''} onClick={() => handleTabClick('projects')}>&lt; Projects &gt;</p>
-                <p className={activeTab === 'contact' ? 'active' : ''} onClick={() => handleTabClick('contact')}>&lt; get in touch &gt;</p>
+                <p className={activeTab === 'about' ? 'active' : ''} onClick={() => handleTabClick('about')}>&lt;About&gt;</p>
+                <p className={activeTab === 'cv' ? 'active' : ''} onClick={() => handleTabClick('cv')}>&lt;CV&gt;</p>
+                <p className={activeTab === 'projects' ? 'active' : ''} onClick={() => handleTabClick('projects')}>&lt;Projects&gt;</p>
+                <p className={activeTab === 'contact' ? 'active' : ''} onClick={() => handleTabClick('contact')}>&lt;get in touch&gt;</p>
             </ul>
         </div>
     );

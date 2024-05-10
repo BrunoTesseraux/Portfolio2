@@ -18,7 +18,7 @@ const Contact = () => {
                 <a href="https://linkedin.com/in/bruno-tesseraux-80828a2a8" target="_blank" rel="noopener noreferrer"><img src="./li1.png" alt="" /></a>
                     </div>
                 </div>
-                <img src="./Portrait.jpg" alt="bruno" />
+                <img className="profile-picture" src="./Portrait.jpg" alt="bruno" />
             </div>
             </div>
             <img className="verlauf" src="./verlauf2.png" alt="" />
