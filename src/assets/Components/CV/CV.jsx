@@ -25,7 +25,7 @@ const CV = () => {
             title: "2017-2019",
             items: ["Barkeeper","Innsbruck", "London", "Teamwork"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "./barLondon.jpg",
+                image: "./barBruno.jpg",
                 text: "Durch die Arbeit bei BE AT ONE habe ich gelernt wie wichtig eine gleiche vorgehensweise beim arbeiten ist. Man kann nicht immer alles so machen, wie man es im Kopf hat, weil jeh mehr Leute zusammenarbeiten, desto chaotischer und unübersichtlicher wird es."
             }
         },
@@ -54,13 +54,19 @@ const CV = () => {
             }
         },
     ];
-    const [selectedStationData, setSelectedStationData] = useState(testData[0].additionalData); // Standardmäßig "1993-2014"
+    const [selectedStationData, setSelectedStationData] = useState(testData[5].additionalData); // Standardmäßig "1993-2014"
     const [activeStationIndex, setActiveStationIndex] = useState(5); // Index des aktiven Abschnitts
+    const [showPopup, setShowPopup] = useState(true)
 
     const handleStationClick = (data, index) => {
         setSelectedStationData(data.additionalData); // Ausgewählte Daten setzen
-        setActiveStationIndex(index); // Index des aktiven Abschnitts aktualisieren
+        setActiveStationIndex(index); 
+        setShowPopup(true);
+        //hier popup logik 
     };
+    const onClose = () => {
+        setShowPopup(false);
+    }
 
     return ( 
         <section className="cv" id='cv'>
@@ -78,20 +84,19 @@ const CV = () => {
                     ))}
                 </CodeKlammern>
             </div>
-            <div className="infos">
-                        {selectedStationData && ( // Rendern nur wenn ausgewählte Daten vorhanden sind
-                    <>
-                <CodeKlammern content="mehr details">
-                    <div className={selectedStationData ? "active" : ""}> {/* Klasse "active" hinzufügen */}
-                            <div>
-                                <p>{selectedStationData.text}</p>
-                            </div>
-                    </div>
-                </CodeKlammern>
-                    <img src={selectedStationData.image} alt="Bild" />
-                </>
-                        )}
-            </div>
+            {showPopup && (
+                <div className="infos">
+                            {selectedStationData && ( // Rendern nur wenn ausgewählte Daten vorhanden sind
+                        <>
+                        <p onClick={onClose} className='close-button'>&times;</p>
+                    <CodeKlammern content="mehr details">
+                        <p>{selectedStationData.text}</p>
+                    </CodeKlammern>
+                        <img src={selectedStationData.image} alt="Bild" />
+                    </>
+                            )}
+                </div>
+            )}
         </section>
     );
 }

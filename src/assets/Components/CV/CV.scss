@@ -28,6 +28,10 @@
     .infos{
         width: 50%;
         z-index: 5;
+        margin-left: 20px;
+        .close-button{
+            display: none;
+        }
         img{
             width: 200px;
             height: 200px;
@@ -48,12 +52,31 @@
     .cv{
         padding-top: 100px;
         width: 90%;
+        position: relative;
         .stationen{
             width: 100%;
             font-size: 0.8rem;
         }
         .infos{
-            display: none;
+            position: absolute;
+            background-color: rgba(33, 33, 33, 0.403);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            padding: 10px;
+            margin-left: 0px;
+            img{
+                margin: auto;
+            }
+            img:hover{
+                scale: 1;
+                border-radius: 50%;
+                height: 200px;
+            }
+            .close-button{
+                text-align: right;
+                display: block;
+                margin-left: auto;
+            }
         }
     }
 }
