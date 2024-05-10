@@ -41,7 +41,7 @@ const CV = () => {
             title: "2023-2024",
             items: ["Supercode", "HTML", "SCSS", "JavaScript", "Recat", "Tailwind"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "./supercode.jpg",
+                image: "./supercode.png",
                 text: "Bei Supercode hatte ich enlich Zeit, mich in diese neue Leidenschaft einzufinden. Jeder Tag war eine neue Herausforderung und das Lerntempo straff. Hier habe ich viele gute Freunde kennengelernt und ein weiteres mal erfahren, wie stark man sich in der richtigen Gruppe geganseitig anspornen kann."
             }
         },
@@ -49,7 +49,7 @@ const CV = () => {
             title: "Now",
             items: ["Looking for work", "Looking for collaborations"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "./supercode.JPG",
+                image: "./supercode.png",
                 text: "Ich freue mich darauf, ein Teil eures Teams zu werden. Außerdem freue ich mich auch über einzelne kleine Projekte. Bitte schreibt mich hierfür einfach an: bruno.tesseruax@gmx.de. gerne auch zwischen 09:00 und 17:00 einfach anrufen. So kommen die Leute zam. (Falls dein projekt ehrenamtlich ist, bitte gleich erwähnen, vllt hab ich ja auch bock drauf und die Seite wird 50-100% billiger!!)"
             }
         },
