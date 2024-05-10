@@ -49,7 +49,7 @@ const CV = () => {
             title: "Now",
             items: ["Looking for work", "Looking for collaborations"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
-                image: "supercodePräsentation2.JPG",
+                image: "./supercodePräsentation2.JPG",
                 text: "Ich freue mich darauf, ein Teil eures Teams zu werden. Außerdem freue ich mich auch über einzelne kleine Projekte. Bitte schreibt mich hierfür einfach an: bruno.tesseruax@gmx.de. gerne auch zwischen 09:00 und 17:00 einfach anrufen. So kommen die Leute zam. (Falls dein projekt ehrenamtlich ist, bitte gleich erwähnen, vllt hab ich ja auch bock drauf und die Seite wird 50-100% billiger!!)"
             }
         },
