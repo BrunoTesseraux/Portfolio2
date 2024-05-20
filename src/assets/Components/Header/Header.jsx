@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CodeKlammern from "../CodeKlammern/CodeKlammern";
 import Nav from "../Nav/Nav";
 import "./Header.scss"
@@ -18,6 +18,18 @@ const Header = () => {
         };
     }, []);
     
+
+    useEffect(() => {
+        const handleScroll = (event) => {
+          console.log('Page scrolled:', window.pageYOffset);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
 
     return ( 

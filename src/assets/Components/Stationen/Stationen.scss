@@ -22,6 +22,15 @@
     }
     ul{
         list-style: none;
+        li{
+            display: none;
+        }
+        li:nth-child(1){
+            display: block;
+        } 
+        li:nth-child(2){
+            display: block;
+        }
     }
     &.left{
         text-align: end;

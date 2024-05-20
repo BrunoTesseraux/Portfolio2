@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 770px) { 
     .cv{
-        padding-top: 100px;
+        padding-top: 50px;
         width: 90%;
         position: relative;
         .stationen{
@@ -65,6 +65,12 @@
             border-radius: 10px;
             padding: 10px;
             margin-left: 0px;
+            top: 50px;
+            bottom: 50px;
+            .infotext{
+                height: 240px;
+                overflow-x: scroll;
+            }
             img{
                 margin: auto;
             }

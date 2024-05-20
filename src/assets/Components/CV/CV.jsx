@@ -18,7 +18,7 @@ const CV = () => {
             items: ["Ausbildung zum Bankkaufmann", "entdecken anderer Möglichkeiten"],
             additionalData: { // Zusätzliche Daten für Abschnitt 2
                 image: "sparkasse2.jpg",
-                text: "In meiner Zeit in der Sparkasse habe ich schnell festgestellt, dass mir der Verkauf von Finanzprodukten nicht liegt. Schnell habe ich angefangen, andere Möglichkeiten zu suchen, wie ich meine Arbeitszeit dort produktiv verbringen kann. Aus dieser Motivation heraus ist ein Werbevideo für die Sparkasse entstanden und ich hatte die Möglichkeit ein Eigenes Snowboard zu bauen !!!HIER MUSS NOCH DER LINK REIN!!!"
+                text: "In meiner Zeit in der Sparkasse habe ich schnell festgestellt, dass mir der Verkauf von Finanzprodukten nicht liegt. Schnell habe ich angefangen, andere Möglichkeiten zu suchen, wie ich meine Arbeitszeit dort produktiv verbringen kann. Aus dieser Motivation heraus ist ein Werbevideo für die Sparkasse entstanden und ich hatte die Möglichkeit ein Eigenes Snowboard zu bauen."
             }
         },
         {
@@ -90,7 +90,7 @@ const CV = () => {
                         <>
                         <p onClick={onClose} className='close-button'>&times;</p>
                     <CodeKlammern content="mehr details">
-                        <p>{selectedStationData.text}</p>
+                        <p className='infotext'>{selectedStationData.text}</p>
                     </CodeKlammern>
                         <img src={selectedStationData.image} alt="Bild" />
                     </>

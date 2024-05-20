@@ -48,8 +48,13 @@
 }
 @media screen and (max-width: 770px) { 
     .single-project{
+        height: 200px;
+        .logo{
+            height: 200px;
+        }
         p{
             font-size: 1rem;
+            padding-top: 80px;
         }
     }
 }
