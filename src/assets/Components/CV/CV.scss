@@ -48,6 +48,17 @@
     }
 }
 
+@media screen and (min-width: 771px) {
+    .infotext{
+        height: 140px;
+        overflow-x: hidden;
+        transition: transform 0.5s; //??????
+        &:hover{
+            height: fit-content;
+        }
+    }
+}
+
 @media screen and (max-width: 770px) { 
     .cv{
         padding-top: 50px;

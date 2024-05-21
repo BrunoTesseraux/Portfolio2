@@ -17,7 +17,6 @@
             border-bottom-left-radius: 10px;
             transform: translateY(-750px);
 
-
             animation: parralaxcontact 1s linear infinite;
             animation-play-state: paused;
             animation-delay: calc(var(--scroll) * -1s);
@@ -85,6 +84,7 @@
         transform: translateY(350px);
     }
 }
+
 
 @media screen and (max-width: 770px) {
     .contact {

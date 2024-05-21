@@ -62,11 +62,23 @@ header {
 @media screen and (max-width: 770px) { 
     header{
         .profile{
-            flex-direction: column;
+            // flex-direction: column;
             width: 100%;
             padding-top: 35px;
+            .name{
+                h1{
+                    font-size: 2rem;
+                }
+            }
+            .short-description{
+                margin-top: 50px;
+                z-index: -1;
+                .about-me{
+                    font-size: 1rem;
+                }
+            }
             .name, .short-description{
-                margin-inline: 10%;
+                margin-inline: 1%;
             }
             img{
                 scale: 2;
@@ -79,7 +91,6 @@ header {
         }
     }
 }
-
 
 @keyframes parralax {
     to {
