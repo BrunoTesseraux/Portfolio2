@@ -50,11 +50,11 @@
 
 @media screen and (min-width: 771px) {
     .infotext{
-        height: 140px;
+        max-height: 140px;
         overflow-x: hidden;
-        transition: transform 0.5s; //??????
+        transition: max-height 0.5s smooth;
         &:hover{
-            height: fit-content;
+            max-height: fit-content;
         }
     }
 }

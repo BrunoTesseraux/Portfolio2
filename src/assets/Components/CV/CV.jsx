@@ -10,7 +10,7 @@ const CV = () => {
             items: ["Kindheit", "Schule"],
             additionalData: { 
                 image: "schule.JPG",
-                text: "Ich habe schon von klein auf immer Herausforderungen gesucht. Dabei habe ich mich aber noch nie voll und ganz auf die Efahrungen anderer verlassen können. Was wenn es einen besseren Weg gibt? Außerdem in der 9ten Klasse erste berührungspunkte zur Website erstellung."
+                text: "Ich habe schon von klein auf immer Herausforderungen gesucht. Dabei habe ich mich aber noch nie voll und ganz auf die Efahrungen anderer verlassen wollen. Was wenn es einen besseren Weg gibt? In der 9ten Klasse hatte ich meine ersten Berührungspunkte mit dem erstellen von digitalen Produkten. Während mir die kreative Seite wie Flash und Photoshop nicht so viel Spaß gemacht hat, habe ich am schreiben von HTML und CSS sehr viel Gefallen gefunden. Aufgrund eines Schulwechsels konnte ich dieses Angebot leider nicht weiter verfolgen."
             }
         },
         {
