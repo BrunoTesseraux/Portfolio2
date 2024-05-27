@@ -23,7 +23,7 @@ const CV = () => {
         },
         {
             title: "2017-2019",
-            items: ["Barkeeper","Innsbruck", "London", "Teamwork"],
+            items: ["Barkeeper","Innsbruck", "London"],
             additionalData: { 
                 image: "./barBruno.jpg",
                 text: "Nach der Sparkasse wollte ich erstmal eine komplett neue Perspektive erleben und habe in Innsbruck ein Jahr als Snowboardlehrer gearbeitet. Dann hat mich die Liebe nach London gezogen, wo ich angefangen habe als Barkeeper zu arbeiten. Durch meine Arbeit bei BE AT ONE habe ich gelernt wie wichtig eine gleich strukturierte Vorgehensweise beim Arbeiten ist, wenn man in einem Team/ in mehreren Teams arbeitet. Wird diese nicht eingehalten, werden sämtliche Prozesse verzögert und der Kunde hat eine schlechte Erfahrung."
@@ -88,10 +88,10 @@ const CV = () => {
                             {selectedStationData && ( 
                         <>
                         <p onClick={onClose} className='close-button'>&times;</p>
+                        <img src={selectedStationData.image} alt="Bild" />
                     <CodeKlammern content="mehr details">
                         <p className='infotext'>{selectedStationData.text}</p>
                     </CodeKlammern>
-                        <img src={selectedStationData.image} alt="Bild" />
                     </>
                             )}
                 </div>

@@ -19,10 +19,11 @@
         }
         .trenner{
             width: 3px;
-            height: 100%;
+            height: 89%;
             background-color: orange;
             position: absolute;
             left: 50%;
+            top: 2%;
         }
     }
     .infos{
@@ -40,24 +41,9 @@
             transition: 0.5s;
             border: 1px solid rgba(128, 128, 128, 0.265);
         }
-        img:hover{
-            height: 300px;
-            scale: 3;
-            border-radius: 0;
-        }
     }
 }
 
-@media screen and (min-width: 771px) {
-    .infotext{
-        max-height: 140px;
-        overflow-x: hidden;
-        transition: max-height 0.5s smooth;
-        &:hover{
-            max-height: fit-content;
-        }
-    }
-}
 
 @media screen and (max-width: 770px) { 
     .cv{

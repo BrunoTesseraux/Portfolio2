@@ -1,5 +1,5 @@
 .station{
-    width: 48.5%;
+    width: 50%;
     position: relative;
     h2{
         color: orange;
@@ -22,18 +22,10 @@
     }
     ul{
         list-style: none;
-        li{
-            display: none;
-        }
-        li:nth-child(1){
-            display: block;
-        } 
-        li:nth-child(2){
-            display: block;
-        }
     }
     &.left{
         text-align: end;
+        padding-right: 10px;
         h2::after{
             content: '🔶'; /* Inhalt des After-Elements */
             position: absolute;
@@ -45,6 +37,24 @@
             content: '🔶'; /* Inhalt des After-Elements */
             position: absolute;
             transform: translateX(-100%);
+        }
+    }
+    @media screen and (max-width: 770px){
+        &.left{
+            text-align: end;
+            padding-right: 8px;
+        }
+        &.right{
+            margin-left: 53.2%;
+        }
+        li{
+            display: none;
+        }
+        li:nth-child(1){
+            display: block;
+        } 
+        li:nth-child(2){
+            display: block;
         }
     }
 }
