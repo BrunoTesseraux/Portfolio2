@@ -25,27 +25,34 @@
     }
     &.left{
         text-align: end;
-        padding-right: 10px;
+        padding-right: 20px;
         h2::after{
             content: '🔶'; /* Inhalt des After-Elements */
             position: absolute;
+            transform: translateX(10px);
         }
     }
     &.right{
-        margin-left: 52%;
+        margin-left: 54%;
         h2::before{
             content: '🔶'; /* Inhalt des After-Elements */
             position: absolute;
-            transform: translateX(-100%);
+            transform: translateX(-37px);
         }
     }
     @media screen and (max-width: 770px){
         &.left{
             text-align: end;
             padding-right: 8px;
+            h2::after{
+                transform: translateX(0);
+            }
         }
         &.right{
             margin-left: 53.2%;
+            h2::before{
+                transform: translateX(-100%);
+            }
         }
         li{
             display: none;
