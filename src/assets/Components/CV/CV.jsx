@@ -70,7 +70,7 @@ const CV = () => {
     return ( 
         <section className="cv" id='cv'>
             <div className="stationen">
-                <CodeKlammern content="Lebenslauf">
+                <CodeKlammern content="CV">
                     <div className="trenner"></div>
                     {testData.map((section, index) => (
                         <Stationen 
