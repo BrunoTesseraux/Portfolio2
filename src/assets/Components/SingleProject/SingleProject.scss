@@ -66,7 +66,7 @@
                     grid-row: 2/3;
                     font-size: 0.5rem;
                     margin: 5px 10px 50px 10px;
-                    max-height: 150px;
+                    max-height: 75px;
                 }
             }
         }
@@ -82,16 +82,18 @@
         &:hover .project-title{
             font-size: 0;
         }
-        @media screen and (max-width: 770px) { 
-            .single-project{
+    }
+}
+@media screen and (max-width: 770px) { 
+    .single-project{
+        .card{
+            height: 200px !important;
+            .background{
                 height: 200px;
-                .background{
-                    height: 200px;
-                }
-                .project-title{
-                    font-size: 1rem;
-                    padding-top: 80px;
-                }
+            }
+            .project-title{
+                font-size: 1rem;
+                padding-top: 80px;
             }
         }
     }
