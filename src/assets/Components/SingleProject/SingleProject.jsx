@@ -9,7 +9,7 @@ const SingleProject = ({ project }) => { // Nehmen Sie project als Prop an
         //     <p className="beschreibung">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem recusandae nulla beatae iste illum, quod voluptatum officiis rem amet!</p>
         // </a>
 
-        <div className="single-project">
+        <a href={project.link} target="_blank" className="single-project">
             <div className="card">
                 <img src={project.background} className="background" alt="Logo" />
                 <p className="project-title">{project.title}</p>
@@ -18,7 +18,7 @@ const SingleProject = ({ project }) => { // Nehmen Sie project als Prop an
                     <p className="beschreibung">{project.beschreibung}</p>
                 </div>
             </div>
-        </div>
+        </a>
     );
 }
 
