@@ -42,7 +42,7 @@ const Header = () => {
             <img src="./profilePic.PNG" alt="" />
             <div className="short-description">
             <CodeKlammern content="about me">
-            <p className="about-me">Hey! Ich bin Bruno, ein sehr vielseitig interresierter Fullstack-Developer</p>
+            <p className="about-me">Hey! Ich bin Bruno, ein sehr vielseitig interessierter Fullstack-Developer</p>
             </CodeKlammern>
             </div>
         </div>
